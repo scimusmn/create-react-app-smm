@@ -1,30 +1,22 @@
 import React from 'react';
-import logo from '../logo.svg';
+import { BrowserRouter } from 'react-router-dom';
+import { Container } from 'reactstrap';
+import AppRoutes from './AppRoutes';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          {' '}
-          <code>src/App.js</code>
-          {' '}
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+//
+// Serve the app from a subdirectory in production if needed.
+//
+const basename = process.env.NODE_ENV === 'development' ? '/' : '/';
+
+const App = () => (
+  <BrowserRouter basename={basename}>
+    <div className="base-container">
+      <Container fluid>
+        <AppRoutes />
+      </Container>
     </div>
-  );
-}
+  </BrowserRouter>
+);
 
 export default App;
