@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Container } from 'reactstrap';
 import AppRoutes from './AppRoutes';
-import './App.css';
 
 //
 // Serve the app from a subdirectory in production if needed.
